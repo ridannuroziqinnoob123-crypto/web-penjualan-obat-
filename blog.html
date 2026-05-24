@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tips Kesehatan - ApotekSehat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root { --pink-primary: #e84393; --pink-light: #ff7eb3; --pink-dark: #c44569; --pink-bg: #fff0f6; }
+        .bg-pink-gradient { background: linear-gradient(135deg, var(--pink-light) 0%, var(--pink-primary) 100%); }
+        .btn-pink { background: var(--pink-primary); color: white; border: none; }
+        .btn-pink:hover { background: var(--pink-dark); color: white; }
+        .text-pink { color: var(--pink-primary) !important; }
+        .nav-link.active { color: var(--pink-primary) !important; font-weight: 600; }
+        .blog-card { border: none; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: all 0.3s; }
+        .blog-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(232,67,147,0.15); }
+        .blog-img { height: 200px; object-fit: cover; }
+        .category-badge { background: var(--pink-primary); color: white; padding: 3px 10px; border-radius: 15px; font-size: 0.8rem; }
+        footer { background-color: #2d3436; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="bi bi-heart-pulse"></i> ApotekSehat</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Produk Obat</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="blog.html">Tips Kesehatan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-pink-gradient text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Tips & Artikel Kesehatan</h1>
+            <p class="lead">Edukasi farmasi & gaya hidup sehat dari apoteker kami</p>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <article class="card blog-card h-100">
+                        <img src="https://placehold.co/400x200/ff7eb3/ffffff?text=Tips+Obat" class="card-img-top blog-img" alt="Blog">
+                        <div class="card-body">
+                            <span class="category-badge">Farmasi</span>
+                            <h5 class="card-title mt-2">Cara Minum Obat yang Benar</h5>
+                            <p class="text-muted small"><i class="bi bi-calendar3"></i> 15 Jan 2026</p>
+                            <p class="card-text">Sebelum/sesudah makan? Dengan air putih atau jus? Simak panduan lengkap dari apoteker...</p>
+                            <a href="#" class="btn btn-outline-pink btn-sm">Baca Artikel</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <article class="card blog-card h-100">
+                        <img src="https://placehold.co/400x200/e84393/ffffff?text=Vitamin+Daily" class="card-img-top blog-img" alt="Blog">
+                        <div class="card-body">
+                            <span class="category-badge">Suplemen</span>
+                            <h5 class="card-title mt-2">Kapan Harus Minum Vitamin?</h5>
+                            <p class="text-muted small"><i class="bi bi-calendar3"></i> 10 Jan 2026</p>
+                            <p class="card-text">Vitamin C, D, B-Complex, atau Zinc? Waktu konsumsi yang tepat agar penyerapan maksimal...</p>
+                            <a href="#" class="btn btn-outline-pink btn-sm">Baca Artikel</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <article class="card blog-card h-100">
+                        <img src="https://placehold.co/400x200/c44569/ffffff?text=Simpan+Obat" class="card-img-top blog-img" alt="Blog">
+                        <div class="card-body">
+                            <span class="category-badge">Penyimpanan</span>
+                            <h5 class="card-title mt-2">Cara Menyimpan Obat di Rumah</h5>
+                            <p class="text-muted small"><i class="bi bi-calendar3"></i> 5 Jan 2026</p>
+                            <p class="card-text">Hindari kamar mandi & dapur! Simak tempat & suhu ideal agar obat tidak cepat kedaluwarsa...</p>
+                            <a href="#" class="btn btn-outline-pink btn-sm">Baca Artikel</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <article class="card blog-card h-100">
+                        <img src="https://placehold.co/400x200/ff9ff3/ffffff?text=Resep+Dokter" class="card-img-top blog-img" alt="Blog">
+                        <div class="card-body">
+                            <span class="category-badge">Edukasi</span>
+                            <h5 class="card-title mt-2">Mengapa Obat Resep Tidak Boleh Dihentikan?</h5>
+                            <p class="text-muted small"><i class="bi bi-calendar3"></i> 1 Jan 2026</p>
+                            <p class="card-text">Antibiotik, obat darah tinggi, dan diabetes harus rutin diminum. Risiko berhenti mendadak...</p>
+                            <a href="#" class="btn btn-outline-pink btn-sm">Baca Artikel</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <article class="card blog-card h-100">
+                        <img src="https://placehold.co/400x200/f368e0/ffffff?text=P3K" class="card-img-top blog-img" alt="Blog">
+                        <div class="card-body">
+                            <span class="category-badge">Keluarga</span>
+                            <h5 class="card-title mt-2">Isi Wajib Kotak P3K di Rumah</h5>
+                            <p class="text-muted small"><i class="bi bi-calendar3"></i> 28 Des 2025</p>
+                            <p class="card-text">Betadine, plester, antiseptik, termometer, dan obat dasar yang wajib tersedia setiap saat...</p>
+                            <a href="#" class="btn btn-outline-pink btn-sm">Baca Artikel</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <article class="card blog-card h-100">
+                        <img src="https://placehold.co/400x200/ff6b9d/ffffff?text=BPOM" class="card-img-top blog-img" alt="Blog">
+                        <div class="card-body">
+                            <span class="category-badge">Keamanan</span>
+                            <h5 class="card-title mt-2">Cek Keaslian Obat di BPOM</h5>
+                            <p class="text-muted small"><i class="bi bi-calendar3"></i> 20 Des 2025</p>
+                            <p class="card-text">Cara mudah cek nomor registrasi obat via aplikasi BPOM Mobile agar terhindar dari produk palsu...</p>
+                            <a href="#" class="btn btn-outline-pink btn-sm">Baca Artikel</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <nav class="mt-5">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item active bg-pink-gradient"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <footer class="text-white py-4">
+        <div class="container text-center"><p class="mb-0">&copy; 2026 ApotekSehat. All rights reserved.</p></div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

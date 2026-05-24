@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - ApotekSehat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --pink-primary: #e84393;
+            --pink-light: #ff7eb3;
+            --pink-dark: #c44569;
+            --pink-bg: #fff0f6;
+        }
+        .bg-pink-gradient { background: linear-gradient(135deg, var(--pink-light) 0%, var(--pink-primary) 100%); }
+        .btn-pink { background: var(--pink-primary); color: white; border: none; }
+        .btn-pink:hover { background: var(--pink-dark); color: white; }
+        .btn-outline-pink { color: var(--pink-primary); border-color: var(--pink-primary); }
+        .btn-outline-pink:hover { background: var(--pink-primary); color: white; }
+        .text-pink { color: var(--pink-primary) !important; }
+        .nav-link.active { color: var(--pink-primary) !important; font-weight: 600; }
+        .feature-card { transition: transform 0.3s, box-shadow 0.3s; border: none; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .feature-card:hover { transform: translateY(-10px); box-shadow: 0 10px 25px rgba(232,67,147,0.15); }
+        footer { background-color: #2d3436; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="bi bi-heart-pulse"></i> ApotekSehat</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Produk Obat</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Tips Kesehatan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-pink-gradient text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-3">apotek vaness Terpercaya</h1>
+            <p class="lead mb-4">Menyediakan obat-obatan, vitamin, dan kebutuhan kesehatan keluarga dengan harga terjangkau & terjamin keasliannya.</p>
+            <a href="products.html" class="btn btn-light btn-lg me-2"><i class="bi bi-cart3"></i> Belanja Obat</a>
+            <a href="contact.html" class="btn btn-outline-light btn-lg"><i class="bi bi-chat-dots"></i> Konsultasi Apoteker</a>
+        </div>
+    </section>
+
+    <section class="py-5" style="background: var(--pink-bg);">
+        <div class="container">
+            <h2 class="text-center mb-5">Mengapa Memilih ApotekSehat?</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card feature-card h-100 p-4 text-center">
+                        <div class="card-body">
+                            <i class="bi bi-shield-check display-4 text-pink mb-3"></i>
+                            <h5 class="card-title">Berizin BPOM</h5>
+                            <p class="card-text">Semua produk obat terdaftar resmi & terjamin keasliannya.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card h-100 p-4 text-center">
+                        <div class="card-body">
+                            <i class="bi bi-truck display-4 text-pink mb-3"></i>
+                            <h5 class="card-title">Pengiriman Cepat</h5>
+                            <p class="card-text">Dikirim di hari yang sama untuk pesanan sebelum jam 15.00.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card h-100 p-4 text-center">
+                        <div class="card-body">
+                            <i class="bi bi-person-badge display-4 text-pink mb-3"></i>
+                            <h5 class="card-title">Apoteker Profesional</h5>
+                            <p class="card-text">Konsultasi gratis dengan apoteker bersertifikat kapan saja.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-pink-gradient text-white text-center">
+        <div class="container">
+            <h2 class="mb-3">Butuh Bantuan Memilih Obat?</h2>
+            <p class="lead mb-4">Tim apoteker kami siap membantu Anda menemukan obat yang tepat & aman.</p>
+            <a href="contact.html" class="btn btn-light btn-lg"><i class="bi bi-whatsapp"></i> Chat WhatsApp</a>
+        </div>
+    </section>
+
+    <footer class="text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2026 ApotekSehat. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

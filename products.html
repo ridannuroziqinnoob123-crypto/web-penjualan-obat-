@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk Obat - ApotekSehat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root { --pink-primary: #e84393; --pink-light: #ff7eb3; --pink-dark: #c44569; --pink-bg: #fff0f6; }
+        .bg-pink-gradient { background: linear-gradient(135deg, var(--pink-light) 0%, var(--pink-primary) 100%); }
+        .btn-pink { background: var(--pink-primary); color: white; border: none; }
+        .btn-pink:hover { background: var(--pink-dark); color: white; }
+        .text-pink { color: var(--pink-primary) !important; }
+        .nav-link.active { color: var(--pink-primary) !important; font-weight: 600; }
+        .product-card { border: none; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: all 0.3s; }
+        .product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(232,67,147,0.15); }
+        .product-img { height: 220px; object-fit: cover; border-radius: 8px 8px 0 0; background-color: #f8f9fa; }
+        .badge-type { position: absolute; top: 10px; right: 10px; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; color: white; }
+        footer { background-color: #2d3436; }
+        #cart-count { font-size: 0.75rem; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="bi bi-heart-pulse"></i> ApotekSehat</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="products.html">Produk Obat</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Tips Kesehatan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+                    <li class="nav-item ms-2">
+                        <a class="nav-link position-relative" href="cart.html">
+                            <i class="bi bi-cart3 fs-5"></i> Keranjang
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-pink-gradient text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Katalog Obat & Vitamin</h1>
+            <p class="lead">Produk berkualitas, terdaftar BPOM, harga terjangkau</p>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <button class="btn btn-pink me-2">Semua</button>
+                <button class="btn btn-outline-secondary me-2">Obat Bebas</button>
+                <button class="btn btn-outline-secondary me-2">Vitamin</button>
+                <button class="btn btn-outline-secondary">Obat Resep</button>
+            </div>
+
+            <div class="row g-4" id="product-list">
+                <!-- Produk 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card position-relative">
+                        <span class="badge-type bg-danger">TERLARIS</span>
+                        <img src="files/paracetamol.jpg" class="card-img-top product-img" alt="Paracetamol 500mg" onerror="this.src='https://placehold.co/400x220/ff7eb3/ffffff?text=Gamang+Tidak+Tersedia'">
+                        <div class="card-body">
+                            <span class="text-muted small">Obat Demam & Nyeri</span>
+                            <h5 class="card-title mt-1">Paracetamol 500mg</h5>
+                            <p class="card-text small text-muted">Meredakan demam, sakit kepala, dan nyeri ringan. Aman untuk dewasa & anak >6 thn.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <h5 class="text-pink mb-0">Rp 8.500</h5>
+                                <button class="btn btn-pink btn-sm" onclick="addToCart('p1', 'Paracetamol 500mg', 8500)"><i class="bi bi-cart-plus"></i> Tambah</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produk 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card">
+                        <img src="files/vitamin-c.jpg" class="card-img-top product-img" alt="Vitamin C 1000mg" onerror="this.src='https://placehold.co/400x220/e84393/ffffff?text=Gamang+Tidak+Tersedia'">
+                        <div class="card-body">
+                            <span class="text-muted small">Suplemen & Vitamin</span>
+                            <h5 class="card-title mt-1">Vitamin C 1000mg</h5>
+                            <p class="card-text small text-muted">Tablet effervescent rasa jeruk. Meningkatkan daya tahan tubuh & antioksidan.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <h5 class="text-pink mb-0">Rp 45.000</h5>
+                                <button class="btn btn-pink btn-sm" onclick="addToCart('p2', 'Vitamin C 1000mg', 45000)"><i class="bi bi-cart-plus"></i> Tambah</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produk 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card">
+                        <span class="badge-type bg-warning text-dark">PROMO</span>
+                        <img src="files/antasida.jpg" class="card-img-top product-img" alt="Antasida DOEN" onerror="this.src='https://placehold.co/400x220/c44569/ffffff?text=Gamang+Tidak+Tersedia'">
+                        <div class="card-body">
+                            <span class="text-muted small">Obat Pencernaan</span>
+                            <h5 class="card-title mt-1">Antasida DOEN</h5>
+                            <p class="card-text small text-muted">Menetralkan asam lambung, meredakan sakit maag, kembung & perut perih.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <h5 class="text-pink mb-0">Rp 12.000</h5>
+                                <button class="btn btn-pink btn-sm" onclick="addToCart('p3', 'Antasida DOEN', 12000)"><i class="bi bi-cart-plus"></i> Tambah</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produk 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card">
+                        <img src="files/obh-combi.jpg" class="card-img-top product-img" alt="OBH Combi Batuk Pilek" onerror="this.src='https://placehold.co/400x220/ff9ff3/ffffff?text=Gamang+Tidak+Tersedia'">
+                        <div class="card-body">
+                            <span class="text-muted small">Obat Batuk & Flu</span>
+                            <h5 class="card-title mt-1">OBH Combi Batuk Pilek</h5>
+                            <p class="card-text small text-muted">Mengatasi batuk berdahak + pilek. Formula cepat keringat & meredakan gejala flu.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <h5 class="text-pink mb-0">Rp 22.000</h5>
+                                <button class="btn btn-pink btn-sm" onclick="addToCart('p4', 'OBH Combi Batuk Pilek', 22000)"><i class="bi bi-cart-plus"></i> Tambah</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produk 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card">
+                        <span class="badge-type bg-secondary">APOTEK</span>
+                        <img src="files/betadine.jpg" class="card-img-top product-img" alt="Betadine Antiseptik 30ml" onerror="this.src='https://placehold.co/400x220/f368e0/ffffff?text=Gamang+Tidak+Tersedia'">
+                        <div class="card-body">
+                            <span class="text-muted small">Antiseptik & Luka</span>
+                            <h5 class="card-title mt-1">Betadine Antiseptik 30ml</h5>
+                            <p class="card-text small text-muted">Cairan pembersih luka luar. Mencegah infeksi bakteri & jamur pada luka ringan.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <h5 class="text-pink mb-0">Rp 18.000</h5>
+                                <button class="btn btn-pink btn-sm" onclick="addToCart('p5', 'Betadine Antiseptik 30ml', 18000)"><i class="bi bi-cart-plus"></i> Tambah</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produk 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card">
+                        <img src="files/oralit.jpg" class="card-img-top product-img" alt="Oralit Powder Sachet" onerror="this.src='https://placehold.co/400x220/ff6b9d/ffffff?text=Gamang+Tidak+Tersedia'">
+                        <div class="card-body">
+                            <span class="text-muted small">Cairan & Elektrolit</span>
+                            <h5 class="card-title mt-1">Oralit Powder Sachet</h5>
+                            <p class="card-text small text-muted">Menggantikan cairan tubuh & elektrolit saat diare atau muntah. Aman untuk segala usia.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <h5 class="text-pink mb-0">Rp 6.500</h5>
+                                <button class="btn btn-pink btn-sm" onclick="addToCart('p6', 'Oralit Powder Sachet', 6500)"><i class="bi bi-cart-plus"></i> Tambah</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-white py-4">
+        <div class="container text-center"><p class="mb-0">&copy; 2026 ApotekSehat. All rights reserved.</p></div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const CART_KEY = 'apotekCart';
+        function getCart() { return JSON.parse(localStorage.getItem(CART_KEY)) || []; }
+        function saveCart(cart) { localStorage.setItem(CART_KEY, JSON.stringify(cart)); updateCartBadge(); }
+        function updateCartBadge() {
+            const cart = getCart();
+            const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const badge = document.getElementById('cart-count');
+            if(badge) badge.textContent = count;
+        }
+        function formatIDR(price) { return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(price); }
+        function addToCart(id, name, price) {
+            let cart = getCart();
+            const existing = cart.find(i => i.id === id);
+            if (existing) existing.quantity++;
+            else cart.push({ id, name, price, quantity: 1 });
+            saveCart(cart);
+            
+            const toast = document.createElement('div');
+            toast.className = 'position-fixed bottom-0 end-0 p-3';
+            toast.style.zIndex = '1060';
+            toast.innerHTML = `<div class="toast show align-items-center text-white bg-success border-0"><div class="d-flex"><div class="toast-body"><i class="bi bi-check-circle"></i> ${name} ditambahkan!</div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button></div></div>`;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 2000);
+        }
+        document.addEventListener('DOMContentLoaded', updateCartBadge);
+    </script>
+</body>
+</html>
